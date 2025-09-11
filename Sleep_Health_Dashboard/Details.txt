@@ -1,0 +1,8 @@
+Dataset retrieved from Kaggle
+
+URL: https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset
+
+400 rows and 13 columns, covering a wide range of variables related to sleep and daily habits. It includes details such as gender, age, occupation, sleep duration, quality of sleep, physical activity level, stress levels, BMI category, blood pressure, heart rate, daily steps, and the presence or absence of sleep disorders. Data is synthetic.
+
+Columns: PersonID, Gender, Age, Occupation, Sleep Duration (hours), Quality of Sleep (1-10), Physical Activity Level (min/day),
+Stress Level (1-10), BMI Category, Blood Pressure (systolic/diastolic), Heart Rate (bpm), Daily Steps, Sleep Disorder
