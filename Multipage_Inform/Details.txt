@@ -1,0 +1,2 @@
+This dashboard is an inform consisting in four pages. The database is about a fictional company that has information about their products, sales, profit, clients, etc.
+The two pdf files show examples on how the menu, front page, and the different pages visuals are shown. 
