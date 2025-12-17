@@ -1,1 +1,24 @@
+Information aboout soccer players, teams, matches in 11 european countries from seasons 2008 to 2016. It contains more than 25000 matches and 10000 players with information from different sources.
+It is a dataset built from real world data and contains multiple tables (match, player, player attributes, league, country, team, team attributes). The database also contains bet quotas. Details of each table is given below:
 
+
+MATCH TABLE
+match_api_id: Unique ID of the match
+id: internal identifier of the match
+country_id: country identifier
+league_id: league identifier
+season: season which the match belongs to (i.e. 2013-2014, etc)
+stage: stage during the competition within the league
+date: complete date of match
+home_team_api_id: local team ID
+away_team_api_id: visitor/ non local team ID
+home_team_goal: Amount of goals scored by the local team
+away_team_goal: Amount of goals scored by the foreign team
+home_player_X(1-11): local team player's ID
+away_player_X(1-11): visitor team player's ID
+home_player_X(1-11)_y: coordinates of each player in the field (formation)
+away_player_X(1-11)_y: coordinates of each player in the field (formation)
+**B365H**, **B365D**, **B365A**, **BW_H**, **BW_D**, **BW_A**, etc.: bet quotas for local (H), visitor (A) wins or tie (D)
+**goal**, **shoton**, **possession**, etc.: Advanced statistics in JSON/XML format for some matches.
+
+PLAYER TABLE
