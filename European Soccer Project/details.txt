@@ -1,6 +1,7 @@
 Information aboout soccer players, teams, matches in 11 european countries from seasons 2008 to 2016. It contains more than 25000 matches and 10000 players with information from different sources.
-It is a dataset built from real world data and contains multiple tables (match, player, player attributes, league, country, team, team attributes). The database also contains bet quotas. Details of each table is given below:
+It is a dataset built from real world data and contains multiple tables (match, player, player attributes, league, country, team, team attributes). The database also contains bet quotas. A star model is built from the database and new tables, measures and columns are generated in order to build the final dashboard.
 
+Details of each table are given below:
 
 MATCH TABLE
 match_api_id: Unique ID of the match
@@ -22,3 +23,97 @@ away_player_X(1-11)_y: coordinates of each player in the field (formation)
 **goal**, **shoton**, **possession**, etc.: Advanced statistics in JSON/XML format for some matches.
 
 PLAYER TABLE
+id: unique identifier
+player_api_id: player identifier. Foreign key for relate to primary key in other tables
+player_fifa_api_id: FIFA database player id
+player_name: complete name of the player
+birthday: born date of player
+height: in cm
+weigth: in kg
+
+PLAYER_ATTRIBUTES
+id: Unique id identifier.
+player_fifa_api_id: FIFA player ID.
+player_api_id: player id(foreign key with player table).
+date: date attributes were captured or updated.
+overall_rating: Global player rating (0-100).
+potential: Max potential that can be achived by player.
+preferred_foot: Dominant foot (left o right).
+attacking_work_rate: Offensive commitment (low, medium, high).
+defensive_work_rate: Defensive commitment (low, medium, high).
+crossing: precision of crossing pass.
+finishing: Capacity to score goals inside the area.
+heading_accuracy: precision in head goals.
+short_passing: precision in short passes.
+volleys: quality of volley shoots.
+dribbling: dribbling ability.
+curve: capacity of applying an effect during a shot, cross, etc.
+free_kick_accuracy: precision in free kicks.
+long_passing: precision in long passes.
+ball_control: precision in ball control.
+acceleration: 
+sprint_speed: 
+agility: of movements
+reactions: fastness of reaction
+balance: Ability to mantain balance
+shot_power: 
+jumping:
+stamina: 
+strength: Physical strenght
+long_shots: precision in long shots
+aggression: Agressiveness in game
+interceptions: 
+positioning: Offensive positioning
+vision: anticipate other player movements (other team)
+penalties: 
+marking: ability during defense
+standing_tackle: effectivity in normal tackles.
+sliding_tackle: effectivity in sliding tackles.
+gk_diving: goal keeper diving
+gk_handling: goal keeper handling
+gk_kicking: goal keeper kicking
+gk_positioning: goal keeper positioning
+gk_reflexes: goal keeper reflexes
+
+LEAGUE
+id: league identifier
+country_id: country identifier
+name: league name
+
+COUNTRY
+id: country id
+name: country name
+
+TEAM
+id: unique register id
+team_api_id: id used as foreign key in other tables
+team_fifa_api_id: FIFA team id
+team_long_name: complete team name
+team_short_name: abrreviation of team name
+
+TEAM_ATTRIBUTES
+id**: unique register id
+team_fifa_api_id: team FIFA identifier.
+team_api_id: id used in other tables as foreign team key.
+date: date when registration was captured or updated
+buildUpPlaySpeed: speed of team (slow, balanced, fast).
+buildUpPlaySpeedClass: textual classification of game speedness
+buildUpPlayDribbling: Dribbling level at the beggining of moves.
+buildUpPlayDribblingClass: Dribbling textual classification (little, normal, lots).
+buildUpPlayPassing: Pass amount
+buildUpPlayPassingClass: Textual pass classification (short, mixed, long).
+buildUpPlayPositioningClass: organised o free form during move construction
+chanceCreationPassing: frequency of attacking passes.
+chanceCreationPassingClass: Clasification of attacking passes.
+chanceCreationCrossing: cross passes frequency.
+chanceCreationCrossingClass: cross passes classification
+chanceCreationShooting: frequency of shots on goal
+chanceCreationShootingClass: shots on goal classification
+chanceCreationPositioningClass: Positioning style during attack (organised o free form).
+defencePressure: Level of deffensive pressure (high, median, low).
+defencePressureClass: deffence pressure textual classification
+defenceAggression: Agresiveness of team in defence.
+defenceAggressionClass: defence agresiveness textual classification
+defenceTeamWidth: wide or stretch.
+defenceTeamWidthClass: team width textual classification
+defenceDefenderLineClass: cover or offside trap
